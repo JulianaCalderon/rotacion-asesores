@@ -1,5 +1,5 @@
 {
   "name": "rotacion-asesores",
   "version": "1.0.0",
-  "private": true
+  "type": "module"
 }
