@@ -1,7 +1,7 @@
 let turn = 0;
 
 const asesores = [
-  "https://wa.me/573142783363",
+  "https://wa.me/573133262197",
   "https://wa.me/573228125466"
   
 ];
