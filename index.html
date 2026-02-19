@@ -2,9 +2,52 @@
 <html>
 <head>
   <title>Rotación Asesores</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .boton {
+      display: block;
+      width: 250px;
+      margin: 40px auto;
+      padding: 15px;
+      background-color: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .boton:hover {
+      background-color: #1d4ed8;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Bienvenidos a Rotación Asesores</h1>
-  <p>Estamos construyendo nuestro sitio web.</p>
+
+  <h1>Rotación Asesores</h1>
+
+  <a class="boton" href="#" onclick="rotate(event)">
+    Contactar Asesor
+  </a>
+
+  <script>
+    async function rotate(event) {
+      event.preventDefault();
+
+      const response = await fetch('/api/rotate');
+      const data = await response.json();
+
+      window.location.href = data.redirect;
+    }
+  </script>
+
 </body>
 </html>
